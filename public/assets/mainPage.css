@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 1000vh;
+    background-color: rgb(211, 211, 211);
+    margin: 0;
+}
+.title-container {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+.title-container h2 {
+    font-size: 40px;
+    position: absolute;
+    left: 20px;
+}
+.title-container .login {
+    font-weight: bold;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.page_container_1 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    background-image: url('../images/result_preview.png');
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position : 600px 300px;
+}
+.page_container_1 h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+.page_container_1 h5 {
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 270px;
+    left: 50px;
+}
+.page_container_1 .workSpace {
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+    text-decoration: none;
+}
