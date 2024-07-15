@@ -1,6 +1,8 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import LoadingComponent from '../module/loading.js';
+
 import useDynamicCss from '../hooks/useDynamicCss.js'
+import LoadingComponent from '../module/loading.js';
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,7 +22,6 @@ const handleSubmit = (event) => {
 
 function SignUp() {
     useDynamicCss('/assets/signUp.css');
-
     return (
         <div>
             <LoadingComponent name="./login.js"></LoadingComponent>

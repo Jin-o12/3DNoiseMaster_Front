@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import useDynamicCss from '../hooks/useDynamicCss.js'
 
+import useDynamicCss from '../hooks/useDynamicCss.js'
 import LoadingComponent from '../module/loading.js';
 
 function MainPage() {
     useDynamicCss('/assets/mainPage.css');
-
     return (
         <div>
             <LoadingComponent name="./mainPage.js"></LoadingComponent>
@@ -29,5 +28,4 @@ function MainPage() {
         </div>
     );
 }
-
 export default MainPage;
