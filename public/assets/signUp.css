@@ -7,7 +7,7 @@ body {
     background-color: rgb(48, 48, 48);
     margin: 0;
 }
-.login-container {
+.signUp-container {
     background-color: rgb(255, 255, 255);
     width: 350px;
     height: 750px;
@@ -17,21 +17,20 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
-.login-container h2 {
+.signUp-container h2 {
     margin-top: -30px;
     margin-bottom: 20%;
     text-align: center;
     font-size: 40px;
 }
-.login-container form {
+.signUp-container form {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-.login-container input[type="text"],
-.login-container input[type="password"],
-.login-container input[type="tel"] { 
+.signUp-container input[type="text"],
+.signUp-container input[type="password"] {
     width: 95%;
     padding: 10px;
     margin-bottom: 10px;
@@ -43,7 +42,7 @@ body {
     flex-grow: 1;
     width: 10%;
 }
-.login-container button[type="submit"] {
+.signUp-container button[type='submit'] {
     width: 70%;
     padding: 15px;
     background-color: #000000;
@@ -54,15 +53,20 @@ body {
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
 }
 .spacer2 {
     flex-grow: 1;
     width: 100%;
 }
-.login-container button[type="sign-up"] {
+.signUp-container .login {
     border: none;
     background-color: rgb(255, 255, 255);
     font-size: 12px;
     display: block;
     margin: 0 auto 20px auto;
+    text-decoration: none;
+    text-align: center;
 }

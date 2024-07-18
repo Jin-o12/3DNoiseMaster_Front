@@ -17,7 +17,7 @@ body {
     position: absolute;
     left: 20px;
 }
-.title-container button[type=logout] {
+.title-container .logout {
     font-weight: bold;
     border: none;
     background-color: rgb(255, 255, 255);
@@ -26,4 +26,5 @@ body {
     top: 30px;
     right: 20px;
     cursor: pointer;
+    text-decoration: none;
 }

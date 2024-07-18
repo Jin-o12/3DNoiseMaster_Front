@@ -8,7 +8,7 @@ import cors from 'cors';                                                        
 
 const app = express();                                                                                  
 const PORT = process.env.PORT || 3000;                                                                                  
-const SECRET_KEY = 'JMT 토큰';                                                                                              //jmt 토큰 설정
+const SECRET_KEY = 'JMT';                                                                                                   //jmt 토큰 설정
 
 app.use(bodyParser.json());                                                                                                 //json 형으로 파싱
 app.use(cors());                                                                                                            //cors 허용
@@ -37,12 +37,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // 정적 파일 제공 설정
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 
 // 모든 요청을 React 앱으로 라우팅
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(PORT, () => {

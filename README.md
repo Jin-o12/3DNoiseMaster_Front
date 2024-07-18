@@ -1,3 +1,24 @@
+# 3D Mesh Master _ Front
+3d mesh master의 front 부분입니다
+
+* React 기반의 서버를 express로 실행
+
+* 실행되지 않을 시
+- package.json 파일 내 모듈 설치
+- 루트 파일 디렉토리에서 터미널을 통해 npm run build로 빌드 실행 및 build 파일 생성 확인 
+
+## 가상의 백엔드 서버 열기 및 테스트
+- 루트 파일 디렉토리에서 npx json-server --watch db.json --port 3001
+Index:
+http://localhost:3001/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3001/users
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

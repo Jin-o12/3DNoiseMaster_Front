@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import useDynamicCss from '../hooks/useDynamicCss.js'
 import LoadingComponent from '../module/loading.js';
 
 function WorkSpace() {
+  const [message, setMessage] = useState('');
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const token = localStorage.getItem('token');                                  // 로컬 스토리지에서 JWT 토큰을 가져옴
+                const response = await axios.get('http://localhost:3000/workSpace', {         // 보호된 리소스에 접근
+                    headers: {
+                        'x-access-token': token
+                    }
+                });
+                setMessage(response.data);
+            } catch (error) {
+                console.error('Error fetching workSpace data', error);
+                setMessage('Failed to fetch workSpace data');
+            }
+        };
+        fetchData();
+    }, []);
+
   useDynamicCss('/assets/workSpace.css');
   return (
       <div>

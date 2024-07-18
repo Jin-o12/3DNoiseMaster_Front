@@ -1,23 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 
-import MainPage from './components/mainPage.js';
-import Login from './components/login.js';
-import SignUp from './components/signUp.js';
-import WorkSpace from './components/workSpace.js';
+import { Provider } from "react-redux";
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/mainPage" element={<MainPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/workSpace" element={<WorkSpace />} />
-      </Routes>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+import App from './App.js'
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <div>
+    <App />
+  </div>
 );
